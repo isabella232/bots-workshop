@@ -3,6 +3,7 @@ exports.main = (event, callback) => {
   const stockApiKey = process.env['STOCK_API_KEY']
   const stockTickerToCheck = event.userMessage.message;
   
+  // get an api key here https://www.alphavantage.co/support/#api-key
   request(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stockTickerToCheck}&apikey=${stockApiKey}`, (error, response, data) => {
     const jsonData = JSON.parse(data);
     const stockData = jsonData["Time Series (Daily)"];
