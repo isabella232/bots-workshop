@@ -24,17 +24,18 @@ We have a chatbot product at HubSpot that allows our users to build chatbots to 
 
 ## Creating a New Chat Bot
 
-1. Go to "Conversations -> Chatflows" in the top nav of the portal
-2. Click "More -> Clone" on the Chatflow named "Blank Bot"
-3. Enter a unique name for your Bot Chatflow
-4. Find your new chatflow in the table
-5. Click "More -> Move to top Priority"
-6. Click "Edit"
-7. Configure targeting
+1. Create an account by responding to the email invitation
+2. Go to "Conversations -> Chatflows" in the top nav of the portal after signing in
+3. Click "More -> Clone" on the Chatflow named "Blank Bot"
+4. Enter a unique name for your Bot Chatflow
+5. Find your new chatflow in the table
+6. Click "More -> Move to top Priority"
+7. Click "Edit"
+8. Configure targeting
     - set the targeting url to something unique
     ![Alt text](unique-url.png?raw=true "Unique Url in targeting")
-8. Toggle the switch in the top right corner of the page
-5. Preview bot in sandbox
+9. Toggle the switch in the top right corner of the page
+10. Preview bot in sandbox
     - go to https://app.hubspot.com/conversations-visitor-sandbox/8398068?showConfig=true&portalId=8398068
     - configure subroute to match your unique targeting url
 
