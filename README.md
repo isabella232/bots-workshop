@@ -26,18 +26,18 @@ HubSpot bots allows its users to build chatbots to interact with their users. A 
 8. Configure targeting
     - set the targeting url to something unique
 
-    ![Alt text](img/unique-url.png?raw=true "Unique Url in targeting")
+    <img src="img/unique-url.png?raw=true" width="500" />
 9. Toggle the switch in the top right corner of the page
 10. Preview bot in sandbox
     - go to https://app.hubspot.com/conversations-visitor-sandbox/8398068?showConfig=true&portalId=8398068
     - configure subroute to match your unique targeting url
 
-    ![Alt text](img/subroute.png?raw=true "Sub route in sandbox")
+    <img src="img/subroute.png?raw=true" width="400" />
 
 
 you should see something like this:
 
-![Alt text](img/base-bot.png?raw=true "base bot")
+<img src="img/base-bot.png?raw=true" width="300" />
 
 ## Part 2: Learning to build bots
 
@@ -45,6 +45,12 @@ All bots consist of three things:
 1. A welcome message
 2. A prompt to start the conversation
 3. Follow up actions
+
+### Welcome message
+A welcome message is a way to tell your user the purpose of the bot. It will display in a pop up while the widget is closed so it should be something to encourage your visitors to interact with your bot.
+
+<img src="img/welcome-message.png?raw=true" width="200" />
+<img src="img/welcome-message-widget.png?raw=true" width="300" />
 
 ### Actions and Prompts
 Bots require a prompt to start the conversation so it knows a user has started an interaction. Otherwise it could send an unlimited number of messages without any user interaction. The follow up actions can collect information from quick replies or user input, send images or text, and branch to other parts of the boarder conversation tree. When an action is configured to take in user input, the bot will use natural language processing to try and pick out the relevent information from the user response. For example if I configure my bot to save information to the contact address field, it will specifically look for an address.
