@@ -1,6 +1,6 @@
 # HubSpot Bot Workshop
 
-HubSpot bots allows its users to build chatbots to interact with their users. A part of bots is the option to write a code snippet to control the bot. During this workshop we are going to build some code snippets to make some sick bots.
+HubSpot bots allows its users to build chat bots to interact with their users. A part of bots is the option to write a code snippet to control the bot. During this workshop we are going to build some code snippets to make some sick bots.
 
 
 <!-- ## Creating a New Portal (Did this in the beginning of the talk)
@@ -20,7 +20,7 @@ HubSpot bots allows its users to build chatbots to interact with their users. A 
 2. Go to "Conversations -> Chatflows" in the top nav of the portal after signing in
 3. Click "More -> Clone" on the Chatflow named "Blank Bot"
 4. Enter a unique name for your Bot Chatflow
-5. Find your new chatflow in the table
+5. Find your new Chatflow in the table
 6. Click "More -> Move to top Priority"
 7. Click "Edit"
 8. Configure targeting
@@ -53,7 +53,7 @@ A welcome message is a way to tell your user the purpose of the bot. It will dis
 <img src="img/welcome-message-widget.png?raw=true" width="300" />
 
 ### Actions and Prompts
-Bots require a prompt to start the conversation so it knows a user has started an interaction. Otherwise it could send an unlimited number of messages without any user interaction. The follow up actions can collect information from quick replies or user input, send images or text, and branch to other parts of the boarder conversation tree. When an action is configured to take in user input, the bot will use natural language processing to try and pick out the relevent information from the user response. For example if I configure my bot to save information to the contact address field, it will specifically look for an address.
+Bots require a prompt to start the conversation so it knows a user has started an interaction. Otherwise it could send an unlimited number of messages without any user interaction. The follow up actions can collect information from quick replies or user input, send images or text, and branch to other parts of the boarder conversation tree. When an action is configured to take in user input, the bot will use natural language processing to try and pick out the relevant information from the user response. For example if I configure my bot to save information to the contact address field, it will specifically look for an address.
 
 ![Alt text](img/actions.png?raw=true "actions")
 
@@ -66,23 +66,23 @@ Connections are what tie together the bot actions into a conversation tree. Each
 
 Let's build a bot! There are a bunch of different things bots can do, but most make an api request and echo some data.
 
-To help give some insparation here is a list of public APIs https://github.com/toddmotto/public-apis
+To help give some inspiration here is a list of public APIs https://github.com/toddmotto/public-apis
 
 ### Examples
 1. [Cat fact bot](examples/cat-fact-bot.js)
 2. [Stock Bot](examples/stock-bot.js)
 3. [Trivia bot](https://github.com/MotionAI/nodejs-samples/blob/master/triviabot.js)
-    - NOTE: This is an example from MotionAI's implementation (MotionAI is a software company that develops and "trains" chatbots that HubSpot acquired a year ago), so try to incorporate this example into your own
+    - NOTE: This is an example from MotionAI's implementation (MotionAI is a software company that develops and "trains" chat bots that HubSpot acquired a year ago), so try to incorporate this example into your own
 4. [Beer bot](examples/beer-bot.py)
     - Created by Steve Rowell at HubSpot. This bot uses python which is not available to all at this time, but shows that you can collect information through quick replies in the lambda through creating a session and having states stored in a contact property. At HubSpot, we have beer on tap in a bunch of different locations, and using pubspot API, he created a way to output what's on tap. Super cool!
 
 New to javascript? Here's a [quick cheat sheet](https://javascript.pythoncheatsheet.org/) that goes over the syntax.
 
-### Challange
+### Challenge
 
 Can you make a bot with several code snippets and branching using `nextModuleNickname`?
 
-## Part 3: How does our system run code snippets?
+## Part 3: How do bots system run code snippets?
 
 Behind the scenes we take your javascript function and upload it to AWS Lambada where it waits to be executed by the bot. AWS Lambda is a serverless code execution environment. It's really great at running a single snippet of code without the requirement of setting up the server environment to run the code.
 
