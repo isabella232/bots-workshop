@@ -1,15 +1,7 @@
 # HubSpot Bot Workshop
 
-🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖
+HubSpot bots allows its users to build chatbots to interact with their users. A part of bots is the option to write a code snippet to control the bot. During this workshop we are going to build some code snippets to make some sick bots.
 
-We have a chatbot product at HubSpot that allows our users to build chatbots to interact with their users. Inside that product there is the option to write a code snippet to control the bot. During this workshop we are going to build some code snippets to make some sick bots.
-
-## Our Agenda For Today
-
-1. Create and configure a basic chatbot
-2. Demo example code snippet chatbot
-3. Create and run code snippets on your own bots
-4. Go through how HubSpot chatbots execute code snippets
 
 <!-- ## Creating a New Portal (Did this in the beginning of the talk)
 
@@ -22,7 +14,7 @@ We have a chatbot product at HubSpot that allows our users to build chatbots to 
 6. If you are using a website that you have previously created, you will have to add the embed code into your website. Else, you can skip this step.
     - This might turn out to be a pain, so feel free to go back a couple of steps and just create a made-up url for the purpose of this tutorial, and you can go back and hook up your own later -->
 
-## Creating a New Chat Bot
+## Part 1: Getting Setup
 
 1. Create an account by responding to the email invitation
 2. Go to "Conversations -> Chatflows" in the top nav of the portal after signing in
@@ -33,6 +25,7 @@ We have a chatbot product at HubSpot that allows our users to build chatbots to 
 7. Click "Edit"
 8. Configure targeting
     - set the targeting url to something unique
+
     ![Alt text](img/unique-url.png?raw=true "Unique Url in targeting")
 9. Toggle the switch in the top right corner of the page
 10. Preview bot in sandbox
@@ -46,12 +39,30 @@ you should see something like this:
 
 ![Alt text](img/base-bot.png?raw=true "base bot")
 
+## Part 2: Learning to build bots
 
+All bots consist of three things:
+1. A welcome message
+2. A prompt to start the conversation
+3. Follow up actions
 
-## Next Steps
+### Actions and Prompts
+Bots require a prompt to start the conversation so it knows a user has started an interaction. Otherwise it could send an unlimited number of messages without any user interaction. The follow up actions can collect information from quick replies or user input, send images or text, and branch to other parts of the boarder conversation tree. When an action is configured to take in user input, the bot will use natural language processing to try and pick out the relevent information from the user response. For example if I configure my bot to save information to the contact address field, it will specifically look for an address.
 
-Let's build a bot! There are a bunch of different things bots can do, but most make an api request and echo some data. Here are a few examples:
+![Alt text](img/actions.png?raw=true "actions")
 
+### Connections
+Connections are what tie together the bot actions into a conversation tree. Each action can be configured with a connection which will divert the bots conversation chain given certain parameters or responses. For example, if a visitor has already interacted with my bot or website and I've already collected their information I can divert my bot to skip the actions that collect that information. These connections can be found under the if/then branch tab of the bot action configuration panel.
+
+![Alt text](img/connections.png?raw=true "connections")
+
+## Part 2: Build a bot
+
+Let's build a bot! There are a bunch of different things bots can do, but most make an api request and echo some data.
+
+To help give some insparation here is a list of public APIs https://github.com/toddmotto/public-apis
+
+### Examples
 1. [Cat fact bot](examples/cat-fact-bot.js)
 2. [Stock Bot](examples/stock-bot.js)
 3. [Trivia bot](https://github.com/MotionAI/nodejs-samples/blob/master/triviabot.js)
@@ -59,11 +70,17 @@ Let's build a bot! There are a bunch of different things bots can do, but most m
 4. [Beer bot](examples/beer-bot.py)
     - Created by Steve Rowell at HubSpot. This bot uses python which is not available to all at this time, but shows that you can collect information through quick replies in the lambda through creating a session and having states stored in a contact property. At HubSpot, we have beer on tap in a bunch of different locations, and using pubspot API, he created a way to output what's on tap. Super cool!
 
-Potential public APIs you can use can be found here: https://github.com/toddmotto/public-apis
+New to javascript? Here's a [quick cheat sheet](https://javascript.pythoncheatsheet.org/) that goes over the syntax.
 
-### How It Works
+### Challange
+
+Can you make a bot with several code snippets and branching using `nextModuleNickname`?
+
+## Part 3: How does our system run code snippets?
+
 Behind the scenes we take your javascript function and upload it to AWS Lambada where it waits to be executed by the bot. AWS Lambda is a serverless code execution environment. It's really great at running a single snippet of code without the requirement of setting up the server environment to run the code.
 
+![Alt text](img/lambda.png?raw=true "lambda high level system diagram")
 
 ### Resources on lambda:
 1. [AWS Lambda: How it Works](https://aws.amazon.com/lambda/)
