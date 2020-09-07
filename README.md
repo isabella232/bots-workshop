@@ -33,18 +33,18 @@ We have a chatbot product at HubSpot that allows our users to build chatbots to 
 7. Click "Edit"
 8. Configure targeting
     - set the targeting url to something unique
-    ![Alt text](unique-url.png?raw=true "Unique Url in targeting")
+    ![Alt text](img/unique-url.png?raw=true "Unique Url in targeting")
 9. Toggle the switch in the top right corner of the page
 10. Preview bot in sandbox
     - go to https://app.hubspot.com/conversations-visitor-sandbox/8398068?showConfig=true&portalId=8398068
     - configure subroute to match your unique targeting url
 
-    ![Alt text](subroute.png?raw=true "Sub route in sandbox")
+    ![Alt text](img/subroute.png?raw=true "Sub route in sandbox")
 
 
 you should see something like this:
 
-![Alt text](base-bot.png?raw=true "base bot")
+![Alt text](img/base-bot.png?raw=true "base bot")
 
 
 
@@ -52,11 +52,11 @@ you should see something like this:
 
 Let's build a bot! There are a bunch of different things bots can do, but most make an api request and echo some data. Here are a few examples:
 
-1. [Cat fact bot](cat-fact-bot.js)
-2. [Stock Bot](stock-bot.js)
+1. [Cat fact bot](examples/cat-fact-bot.js)
+2. [Stock Bot](examples/stock-bot.js)
 3. [Trivia bot](https://github.com/MotionAI/nodejs-samples/blob/master/triviabot.js)
     - NOTE: This is an example from MotionAI's implementation (MotionAI is a software company that develops and "trains" chatbots that HubSpot acquired a year ago), so try to incorporate this example into your own
-4. [Beer bot](beer-bot.py)
+4. [Beer bot](examples/beer-bot.py)
     - Created by Steve Rowell at HubSpot. This bot uses python which is not available to all at this time, but shows that you can collect information through quick replies in the lambda through creating a session and having states stored in a contact property. At HubSpot, we have beer on tap in a bunch of different locations, and using pubspot API, he created a way to output what's on tap. Super cool!
 
 Potential public APIs you can use can be found here: https://github.com/toddmotto/public-apis
