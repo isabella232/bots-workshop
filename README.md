@@ -82,9 +82,9 @@ New to javascript? Here's a [quick cheat sheet](https://javascript.pythoncheatsh
 
 Can you make a bot with several code snippets and branching using `nextModuleNickname`?
 
-## Part 3: How do bots system run code snippets?
+## Part 3: How does the bots system run code snippets?
 
-Behind the scenes we take your javascript function and upload it to AWS Lambada where it waits to be executed by the bot. AWS Lambda is a serverless code execution environment. It's really great at running a single snippet of code without the requirement of setting up the server environment to run the code.
+Behind the scenes our systems takes your javascript function and uploads it to AWS Lambada where it waits to be executed by the bot runner. AWS Lambda is a serverless on demand code execution environment that is really great at running a single snippet of code as it does not require having a system constantly running to execute code. Instead of having our own service and having to manage the very variable load of code snippet execution, we can call these lambdas on demand meaning we can execute as many as we want at any time. The downside is that there is a warm up period in order for the lambda executer to build the proper environment for us to execute the snippets in. To combat this, we use the same lambda environment across all of our usage at HubSpot which usually means the environment has been pre warmed up and is ready to execute.
 
 ![Alt text](img/lambda.png?raw=true "lambda high level system diagram")
 
